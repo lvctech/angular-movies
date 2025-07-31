@@ -1,33 +1,10 @@
-<h2>List of movies</h2>
+<h2>Upcoming Releases</h2>
 
-@if(!movies){
-  <div class="loading"><img src="assets/loading_icon.gif"/></div>
-}
+<app-movies-list [movies]="upcomingReleasesMovies"></app-movies-list>
 
-@else if(movies.length === 0) {
-  <div class="no-movies">No movies found</div>
-}
+<h2>In Theaters</h2>
 
-@else {
-  @for(movie of movies; track $index) {
-  <div class ="movies-container">
-    <div>
-      <img [ngSrc]="movie.poster" [priority]="$index === 0" width="169" height="250" />
-    </div>
-    <div>
-      <div>
-    {{$index + 1}}) Movie: <b>{{movie.title | uppercase}}</b>
-    </div>
-    <div>
-      Release Date: {{movie.releaseDate | date:"MMMM-dd-yyyy" | uppercase}}
-    </div>
-    <div>
-      Price: {{movie.price | currency}}
-    </div>
-    </div>
+<app-movies-list [movies]="inTheatersMovies"></app-movies-list>
 
-  </div>
-  }
-}
 
 
