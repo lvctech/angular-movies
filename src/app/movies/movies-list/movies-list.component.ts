@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CurrencyPipe, DatePipe, NgOptimizedImage, UpperCasePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { GenericListComponent } from "../../shared/components/generic-list/generic-list.component";
 
 @Component({
   selector: 'app-movies-list',
-  imports: [DatePipe, RouterOutlet, UpperCasePipe, CurrencyPipe, NgOptimizedImage],
+  imports: [DatePipe, RouterOutlet, UpperCasePipe, CurrencyPipe, NgOptimizedImage, GenericListComponent],
   templateUrl: './movies-list.component.html',
   styleUrl: './movies-list.component.css'
 })
