@@ -1,6 +1,9 @@
 <app-generic-list [elements]="movies">
   <ng-container content>
-    <button (click)="addMovie()">Add a movie</button>
+    <button mat-flat-button (click)="addMovie()">
+      <mat-icon>add</mat-icon>
+      Add Movie
+    </button>
     @for(movie of movies; track $index) {
       <div class ="movies-container">
         <div>
@@ -12,7 +15,7 @@
         </div>
         <div>
           <div>
-        {{$index + 1}} Movie: <b>{{movie.title | uppercase}}</b>
+        {{$index + 1}}) Movie: <b>{{movie.title | uppercase}}</b>
         </div>
         <div>
           Release Date: {{movie.releaseDate | date:"MMMM-dd-yyyy" | uppercase}}

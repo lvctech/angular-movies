@@ -2,11 +2,12 @@ import {CurrencyPipe, DatePipe, NgOptimizedImage, UpperCasePipe} from '@angular/
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
+import { MenuComponent } from "./shared/components/menu/menu.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [DatePipe, RouterOutlet, UpperCasePipe, CurrencyPipe, NgOptimizedImage, MoviesListComponent],
+  imports: [DatePipe, RouterOutlet, UpperCasePipe, CurrencyPipe, NgOptimizedImage, MoviesListComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
