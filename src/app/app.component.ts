@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MoviesListComponent } from './movies/movies-list/movies-list.component';
 import { MenuComponent } from "./shared/components/menu/menu.component";
+import { RatingComponent } from "./shared/components/rating/rating.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [DatePipe, RouterOutlet, UpperCasePipe, CurrencyPipe, NgOptimizedImage, MoviesListComponent, MenuComponent],
+  imports: [DatePipe, RouterOutlet, UpperCasePipe, CurrencyPipe, NgOptimizedImage, MoviesListComponent, MenuComponent, RatingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
