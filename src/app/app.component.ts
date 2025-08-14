@@ -55,4 +55,8 @@ export class AppComponent {
       ];
     }, 2000); // Simulate a delay for loading movies
   }
+
+  processRating(rate: number) {
+    alert(`You rated the movie a ${rate} out of 5 stars`);
+  }
 }
