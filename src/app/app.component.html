@@ -1,7 +1,12 @@
 <app-menu></app-menu>
 
-<app-rating [maxRating]="5" (rated)="processRating($event)"></app-rating>
+<button mat-flat-button class="primary">Primary</button>
+<button mat-flat-button class="secondary">Secondary</button>
+<button mat-flat-button class="warn">Warning</button>
 
+<!-- <app-rating [maxRating]="5" (rated)="processRating($event)"></app-rating> -->
+
+<div class="container">
 <h2>Upcoming Releases</h2>
 
 <app-movies-list [movies]="upcomingReleasesMovies"></app-movies-list>
@@ -9,6 +14,8 @@
 <h2>In Theaters</h2>
 
 <app-movies-list [movies]="inTheatersMovies"></app-movies-list>
+
+</div>
 
 
 

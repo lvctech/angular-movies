@@ -19,3 +19,8 @@ h2 {
   color:red;
   font-weight: bold;
 }
+
+.container {
+  margin: 0 50px;
+  padding-bottom: 100px;
+}
