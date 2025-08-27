@@ -5,10 +5,11 @@
   <mat-form-field appearance="outline">
     <mat-label>Name</mat-label>
     <input matInput [formControl]="form.controls.name"/>
+    <mat-error>{{getErrorMessagesForName()}}</mat-error>
   </mat-form-field>
 
-  <div>
-      <button mat-flat-button (click) ="saveChanges()">Save changes</button>
+  <div class="buttons-container">
+      <button  [disabled]="form.invalid"  mat-flat-button (click) ="saveChanges()">Save changes</button>
       <a routerLink="/genres" mat-stroked-button>Cancel</a>
   </div>
 </form>
